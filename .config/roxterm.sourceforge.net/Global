@@ -1,0 +1,7 @@
+[roxterm options]
+warn_close=1
+only_warn_running=1
+profile=cs
+encoding=UTF-8
+prefer_dark_theme=1
+colour_scheme=cmus
