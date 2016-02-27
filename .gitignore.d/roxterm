@@ -1,0 +1,5 @@
+*
+!/.config/roxterm.sourceforge.net
+!/.config/roxterm.sourceforge.net/*
+!/.gitignore.d
+!/.gitignore.d/roxterm
