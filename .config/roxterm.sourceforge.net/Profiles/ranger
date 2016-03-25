@@ -1,0 +1,20 @@
+[roxterm profile]
+font=Source Code Pro 10
+hide_menubar=1
+show_add_tab_btn=0
+always_show_tabs=0
+allow_bold=1
+audible_bell=0
+exit_action=0
+limit_scrollback=1
+scrollbar_pos=0
+disable_menu_access=1
+disable_tab_menu_shortcuts=1
+colour_scheme=ranger
+saturation=1.000000
+cursor_blink_mode=2
+cursor_shape=0
+use_custom_command=1
+command=ranger
+win_title=ranger
+disable_menu_shortcuts=1
