@@ -1,0 +1,12 @@
+*
+!/.gitignore.d
+!/.gitignore.d/zsh
+!/.gitmodules.d
+!/.gitmodules.d/zshrc
+!/.oh-my-zsh
+!/.zsh_custom.d
+!/.zsh_custom.d/cezary.zsh-theme
+!/.zsh_custom.d/plugins
+!/.zsh_custom.d/plugins/vi-mode
+!/.zsh_custom.d/plugins/vi-mode/vi-mode.plugin.zsh
+!/.zshrc
