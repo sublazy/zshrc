@@ -1,9 +1,7 @@
 *
 !/.gitignore.d
 !/.gitignore.d/zsh
-!/.gitmodules.d
-!/.gitmodules.d/zshrc
-!/.oh-my-zsh
+!/.gitignore.d/zshrc
 !/.zsh_custom.d
 !/.zsh_custom.d/cezary.zsh-theme
 !/.zsh_custom.d/plugins
