@@ -49,10 +49,11 @@ plugins=(git common-aliases sublime tmux fasd)
 
 # User configuration
 
-export PATH="/home/cs/bin:/home/cs/.nvm/v0.10.36/bin:/home/cs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zprofile
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
