@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/cs/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -45,15 +45,12 @@ ZSH_CUSTOM=~/.zsh_custom.d
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases sublime tmux fasd)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zprofile
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,6 +80,11 @@ source ~/.zprofile
 
 alias git="git --no-pager"
 alias vc=vcsh
+alias egrep="egrep --color=auto"
+alias f="fasd -f"
+alias d="fasd -d"
+alias fi="fasd -fi"
+alias di="fasd -di"
 
 export MANWIDTH=90
 export GIT_EDITOR=vim
