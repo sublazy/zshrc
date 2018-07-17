@@ -56,11 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -85,6 +81,11 @@ alias f="fasd -f"
 alias d="fasd -d"
 alias fi="fasd -fi"
 alias di="fasd -di"
+alias ls="ls -X --group-directories-first --color=auto"
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias llht="ls -lht"
 
-export MANWIDTH=90
+export MANWIDTH=80
 export GIT_EDITOR=nvim
