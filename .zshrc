@@ -15,10 +15,15 @@ fpath=(~/.zsh_custom.d $fpath[@])
 autoload -Uz compinit
 compinit
 
+# Enable grouping of directories, files, make-targets, etc in autocomplete menu
+zstyle ':completion:*:matches'         group 'yes'
+zstyle ':completion:*'                 group-name ''
+
 # Enable key-driven interface with higlighting.
 zstyle ':completion:*' menu select
 
 # Use colors in completion
+zstyle ':completion:*' list-dirs-first true
 zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 
 # Autocomplete options also in aliased commands.
