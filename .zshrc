@@ -15,19 +15,30 @@ fpath=(~/.zsh_custom.d $fpath[@])
 autoload -Uz compinit
 compinit
 
+# Enable key-driven interface with higlighting.
+zstyle ':completion:*' menu select
 # Enable grouping of directories, files, make-targets, etc in autocomplete menu
 zstyle ':completion:*:matches'         group 'yes'
 zstyle ':completion:*'                 group-name ''
-
-# Enable key-driven interface with higlighting.
-zstyle ':completion:*' menu select
+zstyle ':completion:*' list-dirs-first true
+# Describe grouping categories
+zstyle ':completion:*:descriptions' format '%B%F{white}---- %d%f ----'
 
 # Use colors in completion
-zstyle ':completion:*' list-dirs-first true
 zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 
 # If case-sensitive completion matches nothing, try insensitive.
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh_custom.d/cache
+
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:*:kill:*:*' verbose yes
+zstyle ':completion:*:kill:*'   force-list always
+
+# A good symbol for fossil VCS? ꩜
+
 
 autoload spectrum
 spectrum
