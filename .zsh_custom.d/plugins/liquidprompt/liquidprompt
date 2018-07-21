@@ -1611,7 +1611,7 @@ _lp_smart_mark()
     case "$LP_VCS_TYPE" in
     git)      mark="$LP_MARK_GIT"             ;;
     git-svn)  mark="$LP_MARK_GIT$LP_MARK_SVN" ;;
-    git-vcsh) mark="$LP_MARK_VCSH";;
+    git-vcsh) mark="${LP_MARK_VCSH}${VCSH_REPO_NAME}";;
     hg)       mark="$LP_MARK_HG"              ;;
     svn)      mark="$LP_MARK_SVN"             ;;
     fossil)   mark="$LP_MARK_FOSSIL"          ;;
