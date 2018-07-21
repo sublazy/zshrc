@@ -5,12 +5,25 @@
 # ~/.zshrc          Run for interactive shells.
 # ~/.zlogin         Run for login shells.
 
+# Don't duplicate entries in fpath
+typeset -U fpath
+
 # Locations searched for functions.
 fpath=(~/.zsh_custom.d $fpath[@])
 
 # Initialize the autocompletion system
 autoload -Uz compinit
 compinit
+
+# Enable key-driven interface with higlighting.
+zstyle ':completion:*' menu select
+
+# Use colors in completion
+zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
+
+# Autocomplete options also in aliased commands.
+setopt COMPLETE_ALIASES
+
 
 autoload spectrum
 spectrum
@@ -35,19 +48,6 @@ zstyle :compinstall filename '/home/cs/.zshrc'
 # End of lines added by compinstall
 
 
-alias git="git --no-pager"
-alias vc=vcsh
-alias egrep="egrep --color=auto"
-alias f="fasd -f"
-alias d="fasd -d"
-alias fi="fasd -fi"
-alias di="fasd -di"
-alias ls="ls -X --group-directories-first --color=auto"
-alias ll="ls -l"
-alias la="ls -a"
-alias lla="ls -la"
-alias llht="ls -lht"
-
 export MANWIDTH=80
 
 # TODO nvim if installed. Otherwise vim
@@ -55,5 +55,7 @@ export GIT_EDITOR=nvim
 
 
 source ~/.zsh_custom.d/cezary.zsh-theme
+source ~/.zsh_custom.d/aliases.zsh
+
 # References
 # [1]: http://zsh.sourceforge.net/Guide/zshguide02.html
