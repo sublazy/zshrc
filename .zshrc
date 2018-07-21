@@ -57,8 +57,10 @@ export MANWIDTH=80
 # TODO nvim if installed. Otherwise vim
 export GIT_EDITOR=nvim
 
+source ~/.zsh_custom.d/plugins/liquidprompt/liquidpromptrc-dist
+source ~/.zsh_custom.d/plugins/liquidprompt/liquid.theme
+source ~/.zsh_custom.d/plugins/liquidprompt/liquidprompt
 
-source ~/.zsh_custom.d/cezary.zsh-theme
 source ~/.zsh_custom.d/aliases.zsh
 
 # References
