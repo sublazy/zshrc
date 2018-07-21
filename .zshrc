@@ -26,9 +26,8 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-dirs-first true
 zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 
-# Autocomplete options also in aliased commands.
-setopt COMPLETE_ALIASES
-
+# If case-sensitive completion matches nothing, try insensitive.
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 autoload spectrum
 spectrum
