@@ -82,6 +82,10 @@ bindkey -e
 zstyle :compinstall filename '/home/cs/.zshrc'
 # End of lines added by compinstall
 
+# Do query the user before executing 'rm *' or 'rm path/*'
+# $ rm -rf *
+# zsh: sure you want to delete all the files in /home/dope/foo [yn]?
+setopt normstarsilent
 
 export MANWIDTH=80
 
