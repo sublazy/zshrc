@@ -72,6 +72,9 @@ setopt interactivecomments
 
 setopt extendedglob
 
+# Nobody need flow control anymore (C-S, C-Q).
+setopt noflowcontrol
+
 # Use emacs-style key bindings
 bindkey -e
 
