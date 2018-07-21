@@ -50,8 +50,25 @@ SAVEHIST=20000 # Number of entries in the history file.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
+setopt extended_history
+
 # All sessions will append to the same history file.
 setopt appendhistory
+
+# Prepend a command with a space to prevent it from being recorded
+setopt hist_ignore_space
+
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+
+# Keep history of `cd` as in with `pushd` and make `cd -<TAB>` work.
+DIRSTACKSIZE=16
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushd_minus
+
+# Ignore lines prefixed with '#'.
+setopt interactivecomments
 
 setopt extendedglob
 
