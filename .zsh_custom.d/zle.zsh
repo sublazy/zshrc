@@ -28,11 +28,16 @@ key[Menu]=''''
 
 # Load required widgets
 #autoload insert-composed-char
-#autoload edit-command-line
-
 # insert-composed-char doesn't seem to work
-#zle -N edit-command-line
 #zle -N insert-composed-char
+
+
+#autoload edit-command-line
+#zle -N edit-command-line
+
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
 
 bindkey $key[Delete] delete-char
 bindkey $key[Backspace] backward-delete-char
@@ -43,8 +48,8 @@ bindkey "^Q" delete-word
 bindkey $key[Right] forward-char
 bindkey $key[Left] backward-char
 
-bindkey $key[Up] history-beginning-search-backward
-bindkey $key[Down] history-beginning-search-forward
+bindkey $key[Up] history-beginning-search-backward-end
+bindkey $key[Down] history-beginning-search-forward-end
 bindkey "^S" history-incremental-search-forward
 bindkey "^R" history-incremental-search-backward
 

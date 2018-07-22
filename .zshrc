@@ -18,8 +18,8 @@ compinit
 # Enable key-driven interface with higlighting.
 zstyle ':completion:*' menu select
 # Enable grouping of directories, files, make-targets, etc in autocomplete menu
-zstyle ':completion:*:matches'         group 'yes'
-zstyle ':completion:*'                 group-name ''
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-dirs-first true
 # Describe grouping categories
 zstyle ':completion:*:descriptions' format '%B%F{white}---- %d%f ----'
@@ -37,7 +37,11 @@ zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:*:kill:*:*' verbose yes
 zstyle ':completion:*:kill:*'   force-list always
 
-# A good symbol for fossil VCS? ꩜
+# When completing `cd -<TAB>` select the first position immediately
+zstyle ':completion:*:*:cd:*:directory-stack' menu yes select=1
+
+# Don't select automatically when completing local dirs.
+zstyle ':completion:*:*:cd:*:local-directory' menu yes select=0
 
 
 autoload spectrum
@@ -78,6 +82,7 @@ setopt noflowcontrol
 # Use emacs-style key bindings
 bindkey -e
 
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/cs/.zshrc'
 # End of lines added by compinstall
@@ -87,10 +92,24 @@ zstyle :compinstall filename '/home/cs/.zshrc'
 # zsh: sure you want to delete all the files in /home/dope/foo [yn]?
 setopt normstarsilent
 
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install)"
+
+# Search a keyword in the history [2].
+hist-search() { fc -lim "*$@*" 1 }
+
 export MANWIDTH=80
 
-# TODO nvim if installed. Otherwise vim
-export GIT_EDITOR=nvim
+
+if [ -x "$(command -v nvim)" ]; then
+	export EDITOR="nvim"
+else
+	export EDITOR="vim"
+fi
+
+export VISUAL=${EDITOR}
+export GIT_EDITOR=${EDITOR}
+
+
 
 source ~/.zsh_custom.d/plugins/liquidprompt/liquidpromptrc-dist
 source ~/.zsh_custom.d/plugins/liquidprompt/liquid.theme
@@ -98,5 +117,8 @@ source ~/.zsh_custom.d/plugins/liquidprompt/liquidprompt
 
 source ~/.zsh_custom.d/aliases.zsh
 
+source ~/.zsh_custom.d/zle.zsh
+
 # References
 # [1]: http://zsh.sourceforge.net/Guide/zshguide02.html
+# [2] https://superuser.com/questions/232457/zsh-output-whole-history
