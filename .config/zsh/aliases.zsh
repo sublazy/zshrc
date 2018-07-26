@@ -16,3 +16,5 @@ alias za='fasd -a'        # any
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zed='fasd -f -e nvim' 	# z-edit
 alias zop='fasd -f -e xdg-open'	# z-open
+
+alias view="nvim -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
