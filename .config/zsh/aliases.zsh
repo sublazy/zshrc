@@ -1,6 +1,8 @@
 alias git="git --no-pager"
 alias vc="vcsh"
 alias egrep="egrep --color=auto"
+alias ovim="/usr/bin/vim"    # old (original) vim
+alias vim="nvim"    # neovim
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
