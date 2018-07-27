@@ -56,7 +56,7 @@ zstyle ':completion:*' use-compctl false
 # History Settings
 # ------------------------------------------------------------------------------
 HISTFILE="$Z/.zsh_history"
-HISTSIZE=100   # Number of entries remembered by a session.
+HISTSIZE=10000 # Number of entries remembered by a session.
 SAVEHIST=20000 # Number of entries in the history file.
 
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -65,8 +65,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Save also timestamps and elapsed time.
 setopt extended_history
 
-# Add lines to history file as soon as their commands exit.
-setopt share_history
+# All sessions will append to the same history file.
+setopt appendhistory
 
 # Prepend a command with a space to prevent it from being recorded
 setopt hist_ignore_space
