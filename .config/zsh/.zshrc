@@ -65,8 +65,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Save also timestamps and elapsed time.
 setopt extended_history
 
-# All sessions will append to the same history file.
-setopt appendhistory
+# Add lines to history file as soon as their commands exit.
+setopt share_history
 
 # Prepend a command with a space to prevent it from being recorded
 setopt hist_ignore_space
