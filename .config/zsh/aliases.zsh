@@ -20,3 +20,15 @@ alias zed='fasd -f -e nvim' 	# z-edit
 alias zop='fasd -f -e xdg-open'	# z-open
 
 alias view="nvim -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
+
+# Global piping aliases
+alias -g .g='| egrep'
+alias -g .gi='| egrep -i'
+alias -g .v='| nvim -'
+alias -g .view='| view'
+alias -g .h='| head'
+alias -g .t='| tail'
+alias -g .h20='| head -20'
+alias -g .t20='| tail -20'
+alias -g .h40='| head -40'
+alias -g .t40='| tail -40'
