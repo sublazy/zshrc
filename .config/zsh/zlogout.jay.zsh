@@ -1,1 +1,1 @@
-pkill zsh-agent
+pkill ssh-agent
