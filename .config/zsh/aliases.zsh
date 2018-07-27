@@ -1,8 +1,11 @@
+if [ -x "$(command -v nvim)" ]; then
+    alias ovim="/usr/bin/vim"    # old (original) vim
+    alias vim="nvim"             # neovim
+fi
+
 alias git="git --no-pager"
 alias vc="vcsh"
 alias egrep="egrep --color=auto"
-alias ovim="/usr/bin/vim"    # old (original) vim
-alias vim="nvim"    # neovim
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -16,15 +19,15 @@ alias zf='fasd -f'        # file
 alias zd='fasd -d'        # directory
 alias za='fasd -a'        # any
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
-alias zed='fasd -f -e nvim' 	# z-edit
+alias zed='fasd -f -e vim' 	# z-edit
 alias zop='fasd -f -e xdg-open'	# z-open
 
-alias view="nvim -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
+alias view="vim -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
 
 # Global piping aliases
 alias -g .g='| egrep'
 alias -g .gi='| egrep -i'
-alias -g .v='| nvim -'
+alias -g .v='| vim -'
 alias -g .view='| view'
 alias -g .h='| head'
 alias -g .t='| tail'
