@@ -19,15 +19,15 @@ alias zf='fasd -f'        # file
 alias zd='fasd -d'        # directory
 alias za='fasd -a'        # any
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
-alias zed='fasd -f -e vim' 	# z-edit
+alias zed='fasd -f -e $EDITOR' 	# z-edit
 alias zop='fasd -f -e xdg-open'	# z-open
 
-alias view="vim -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
+alias view="$EDITOR -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
 
 # Global piping aliases
 alias -g .g='| egrep'
 alias -g .gi='| egrep -i'
-alias -g .v='| vim -'
+alias -g .v='| $EDITOR -'
 alias -g .view='| view'
 alias -g .h='| head'
 alias -g .t='| tail'
