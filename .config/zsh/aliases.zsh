@@ -36,3 +36,5 @@ alias -g .t20='| tail -20'
 alias -g .h40='| head -40'
 alias -g .t40='| tail -40'
 alias -g .wcl='| wc -l'
+
+alias make='make --no-print-directory'
