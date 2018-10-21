@@ -18,11 +18,17 @@ alias lla="ls -la"
 alias zf='fasd -f'        # file
 alias zd='fasd -d'        # directory
 alias za='fasd -a'        # any
-alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias z='fasd_cd -d'      # cd, same functionality as j in autojump
 alias zed='fasd -f -e $EDITOR' 	# z-edit
 alias zop='fasd -f -e xdg-open'	# z-open
 
+# duplicate my aliases from vim
+alias fd='cd $(fasd -dlR | fzf)'   # fuzzy directory selection
+alias fr='nvim $(fasd -flR | fzf)' # fuzzy edit recent file
+
 alias view="$EDITOR -R -c 'set foldmethod=syntax' -c 'set nonumber' -"
+alias open='xdg-open'
+alias o=open
 
 # Global piping aliases
 alias -g .g='| egrep'

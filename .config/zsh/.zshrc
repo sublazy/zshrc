@@ -100,9 +100,9 @@ setopt noflowcontrol
 # Ask for confirmation before executing 'rm *' or 'rm path/*'
 setopt normstarsilent
 
-
 # Initialize fasd plugin
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install)"
+eval "$(fasd --init posix-alias zsh-hook \
+    zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
 
 # Search a keyword in the history [2].
 hist-search() { fc -lim "*$@*" 1 }
