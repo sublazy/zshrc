@@ -123,6 +123,7 @@ autoload -Uz spectrum && spectrum
 source "$Z/zle.zsh"
 source "$Z/aliases.zsh"
 source "$Z/prompt.zsh"
+source "$Z/plugins/ssh-agent.plugin.zsh"
 
 
 # References
