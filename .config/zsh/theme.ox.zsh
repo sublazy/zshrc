@@ -1,0 +1,1 @@
+MACHINE_COLOR="%{$FG[214]%}"
